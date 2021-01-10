@@ -293,3 +293,17 @@ String bodyCountText(int count) {
 
 **3) sh arb_to_dart.sh 실행 후 파일 확인**
 ![image](https://user-images.githubusercontent.com/51875059/104129695-98552b00-53b0-11eb-8e99-74f4128f1161.png)
+
+</br>
+
+**4) widget 연결**
+```dart
+Text(
+  // '$_counter',
+  l10n.bodyCountText(_counter), 
+  style: Theme.of(context).textTheme.headline4,
+),
+```
+![image](https://user-images.githubusercontent.com/51875059/104129768-04d02a00-53b1-11eb-8ace-46fe8c8cda81.png)
+
+

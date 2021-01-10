@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
               l10n.bodyText,
             ),
             Text(
-              '$_counter',
+              l10n.bodyCountText(_counter),
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
