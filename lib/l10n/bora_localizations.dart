@@ -27,6 +27,15 @@ class BoraLocalizations {
         '버튼을 여러번 눌렀습니다.',
         name: 'bodyText',
       );
+
+  String bodyCountText(int count) {
+    return Intl.message(
+      '$count 번 눌렀습니다.',
+      name: 'bodyCountText',
+      args: [count],
+      desc: '이렇게 설명도 달 수 있습니다 :>',
+    );
+  }
 }
 
 class BoraLocalizationsDelegate

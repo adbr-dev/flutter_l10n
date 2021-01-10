@@ -240,4 +240,28 @@ class MyApp extends StatelessWidget {
 
 ![image](https://user-images.githubusercontent.com/51875059/104128540-76a57500-53ab-11eb-9c03-f70d2d57c3fb.png)
 
+</br>
+</br>
+</br>
 
+## In more detail
+
+### Dynamic message (args)
+정적인 문자열 말고 유동적으로 변하는 문자열을 작성해야 될 때도 있는데 그츄?
+
+</br>
+
+**1) args를 받을 수 있는 String 생성**
+bora_localizations.dart
+```
+String bodyCountText(int count) {
+    return Intl.message(
+      '$count 번 눌렀습니다.',
+      name: 'bodyCountText',
+      args: [count],
+      desc: '이렇게 설명도 달 수 있습니다 :>',
+    );
+  }
+```
+
+2)
