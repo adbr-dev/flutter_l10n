@@ -68,3 +68,9 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
   }
 }
 ```
+
+3-2. copy and paste .arb files
+`intl_messages.arb`파일을 수동으로 복사 붙여넣기 해줍니다.
+* intl_messages.arb
+* intl_messages_ko.arb
+* intl_messages_en.arb
