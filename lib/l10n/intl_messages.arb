@@ -1,0 +1,13 @@
+{
+  "@@last_modified": "2021-01-11T00:17:36.745798",
+  "appBarTitle": "flutter 보라 홈페이지",
+  "@appBarTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bodyText": "버튼을 여러번 눌렀습니다.",
+  "@bodyText": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
