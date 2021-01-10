@@ -31,12 +31,12 @@ dev_dependencies:
 </br>
 
 **1-1. add CFBundleLocalizations (Info.plist)**
-```plist
-  <key>CFBundleLocalizations</key>
-	<array>
-		<string>ko</string>
-		<string>en</string>
-	</array>
+```
+<key>CFBundleLocalizations</key>
+<array>
+	<string>ko</string>
+	<string>en</string>
+</array>
 ```
 
 
@@ -99,8 +99,8 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 **3-2. copy and paste .arb files**
 `intl_messages.arb`파일을 수동으로 복사 붙여넣기 해줍니다.
 * intl_messages.arb
-* intl_messages_ko.arb
-* intl_messages_en.arb
+* intl_messages_ko.arb 🆕
+* intl_messages_en.arb 🆕
 
 </br>
 
@@ -134,10 +134,10 @@ flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-us
 
 위 명령어 실행 후 `messages_*.dart`파일들이 생성 됨
 
-* messages_all.dart
-* messages_messages_en.dart
-* messages_messages_ko.dart
-* messages_messages.dart
+* messages_all.dart 🆕
+* messages_messages_en.dart 🆕
+* messages_messages_ko.dart 🆕
+* messages_messages.dart 🆕
 
 </br>
 </br>
