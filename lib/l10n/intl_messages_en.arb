@@ -9,5 +9,13 @@
   "@bodyText": {
     "type": "text",
     "placeholders": {}
+  },
+  "bodyCountText": "pressed the button {count} times.",
+  "@bodyCountText": {
+    "description": "이렇게 설명도 달 수 있습니다 :>",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
   }
 }

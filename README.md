@@ -253,7 +253,7 @@ class MyApp extends StatelessWidget {
 
 **1) args를 받을 수 있는 String 생성**
 bora_localizations.dart
-```
+```dart
 String bodyCountText(int count) {
     return Intl.message(
       '$count 번 눌렀습니다.',
@@ -264,4 +264,25 @@ String bodyCountText(int count) {
   }
 ```
 
-2)
+**2) sh dart_to_arb.sh 실행 후 intl_messages.arb 수정**
+![image](https://user-images.githubusercontent.com/51875059/104129366-7018fc80-53af-11eb-9d05-8c3f5daf9002.png)
+
+* 생성된 `intl_messages.arb` 파일 통으로 ko에 붙여준다. (_messages.arb 파일과 _messages_ko.arb파일은 같음)
+* _en.arb 파일만 수정해준다.
+
+```
+...
+"bodyText": "버튼을 여러번 눌렀습니다.",
+"@bodyText": {
+  "type": "text",
+  "placeholders": {}
+},
+"bodyCountText": "{count} 번 눌렀습니다.",
+"@bodyCountText": {
+  "description": "이렇게 설명도 달 수 있습니다 :>",
+  "type": "text",
+  "placeholders": {
+    "count": {}
+  }
+}
+```

@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2021-01-11T00:17:36.745798",
+  "@@last_modified": "2021-01-11T01:48:43.213839",
   "appBarTitle": "flutter 보라 홈페이지",
   "@appBarTitle": {
     "type": "text",
@@ -9,5 +9,13 @@
   "@bodyText": {
     "type": "text",
     "placeholders": {}
+  },
+  "bodyCountText": "{count} 번 눌렀습니다.",
+  "@bodyCountText": {
+    "description": "이렇게 설명도 달 수 있습니다 :>",
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
   }
 }
