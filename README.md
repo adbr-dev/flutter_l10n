@@ -100,8 +100,9 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-use-deferred-loading lib/l10n/bora_localizations.dart lib/l10n/intl_*.arb
 ```
 
-위 명령어 실행 후 `messages_messages*.dart`파일들이 생성 됨
+위 명령어 실행 후 `messages_*.dart`파일들이 생성 됨
 
+* messages_all.dart
 * messages_messages_en.dart
 * messages_messages_ko.dart
 * messages_messages.dart
