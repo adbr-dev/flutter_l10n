@@ -74,3 +74,20 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 * intl_messages.arb
 * intl_messages_ko.arb
 * intl_messages_en.arb
+
+3-3. open `intl_messages_en.arb` & translate
+```arb
+{
+  "@@last_modified": "2021-01-11T00:17:36.745798",
+  "appBarTitle": "Flutter Bora Home Page",
+  "@appBarTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bodyText": "You have pushed the button this many times:",
+  "@bodyText": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
+```
