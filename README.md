@@ -91,3 +91,17 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
   }
 }
 ```
+
+### 4. [cmd] run arb_to_dart.sh
+```sh
+# intl_translation:generate_from_arb
+# flutter pub run intl_translation:generate_from_arb --output-dir=[저장될 경로] --no-use-deferred-loading [arb를 추출했던 dart 파일] [번역된 arb 파일들]
+
+flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-use-deferred-loading lib/l10n/bora_localizations.dart lib/l10n/intl_*.arb
+```
+
+위 명령어 실행 후 `messages_messages*.dart`파일들이 생성 됨
+
+* messages_messages_en.dart
+* messages_messages_ko.dart
+* messages_messages.dart
