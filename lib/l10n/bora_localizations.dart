@@ -1,6 +1,6 @@
 import 'package:intl/intl.dart';
 
-class CandyLocalizations {
+class BoraLocalizations {
   String get appBarTitle => Intl.message(
         'flutter 보라 홈페이지',
         name: 'appBarTitle',
