@@ -9,6 +9,8 @@ flutter 국제화 프로젝트
 flutter create l10n
 ```
 
+</br>
+
 ### 1. add flutter package 
 * [intl 0.16.1](https://pub.dev/packages/intl/install) 
 * [intl_translation: ^0.17.10+1](https://pub.dev/packages/intl_translation/install)
@@ -25,6 +27,8 @@ dev_dependencies:
     sdk: flutter
   intl_translation: ^0.17.10+1
   ```
+
+</br>
 
 ### 2. new file "bora_localizations.dart"  
 파일 생성 후 string getter 작성
@@ -43,6 +47,8 @@ String get bodyText => Intl.message(
 }
 ```
 
+</br>
+
 ### 3. [cmd] run dart_to_arb.sh
 ```sh
 # flutter pub run intl_translation:extract_to_arb --output-dir=[저장될 경로] [arb를 추출할 dart 파일]
@@ -52,7 +58,9 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 
 위 명령어 실행 후 `intl_messages.arb`파일 생성 됨
 
-3-1. open intl_messages.arb
+</br>
+
+**3-1. open intl_messages.arb()**
 ```arb
 {
   "@@last_modified": "2021-01-11T00:17:36.745798",
@@ -69,13 +77,17 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 }
 ```
 
-3-2. copy and paste .arb files
+</br>
+
+**3-2. copy and paste .arb files**
 `intl_messages.arb`파일을 수동으로 복사 붙여넣기 해줍니다.
 * intl_messages.arb
 * intl_messages_ko.arb
 * intl_messages_en.arb
 
-3-3. open `intl_messages_en.arb` & translate
+</br>
+
+**3-3. open `intl_messages_en.arb` & translate**
 ```arb
 {
   "@@last_modified": "2021-01-11T00:17:36.745798",
@@ -91,6 +103,8 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
   }
 }
 ```
+
+</br>
 
 ### 4. [cmd] run arb_to_dart.sh
 ```sh
