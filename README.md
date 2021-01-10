@@ -29,6 +29,7 @@ dev_dependencies:
   ```
 
 </br>
+</br>
 
 ### 2. new file "bora_localizations.dart"  
 파일 생성 후 string getter 작성
@@ -49,6 +50,7 @@ String get bodyText => Intl.message(
 }
 ```
 
+</br>
 </br>
 
 ### 3. [cmd] run dart_to_arb.sh
@@ -80,6 +82,7 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 ```
 
 </br>
+</br>
 
 **3-2. copy and paste .arb files**
 `intl_messages.arb`파일을 수동으로 복사 붙여넣기 해줍니다.
@@ -107,6 +110,7 @@ flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/b
 ```
 
 </br>
+</br>
 
 ### 4. [cmd] run arb_to_dart.sh
 ```sh
@@ -124,8 +128,11 @@ flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-us
 * messages_messages.dart
 
 </br>
+</br>
 
 ### 5. Add class BoraLocalizationsDelegate and modify class BoraLocalizations in bora_localizations.dart
+
+</br>
 
 **5-1. `BoraLocalizations` class에 다음과 같이 코드를 추가합니다.**
 ```dart
@@ -166,5 +173,39 @@ class BoraLocalizationsDelegate
 
   @override
   bool shouldReload(BoraLocalizationsDelegate old) => false;
+}
+```
+
+</br>
+</br>
+
+### 6. add properties in MaterialApp (main.dart)
+`localizationsDelegates` 속성과 `supportedLocales` 속성을 추가해줍니다.
+
+```dart
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'l10n/bora_localizations.dart';
+
+...
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      ...
+      localizationsDelegates: [
+        BoraLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('ko', 'KR'),
+        Locale('en'),
+      ],
+      ...
+    );
+  }
 }
 ```
