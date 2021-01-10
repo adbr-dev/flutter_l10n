@@ -29,6 +29,18 @@ dev_dependencies:
   ```
 
 </br>
+
+**1-1. add CFBundleLocalizations (Info.plist)**
+```plist
+  <key>CFBundleLocalizations</key>
+	<array>
+		<string>ko</string>
+		<string>en</string>
+	</array>
+```
+
+
+</br>
 </br>
 
 ### 2. new file "bora_localizations.dart"  
@@ -225,4 +237,7 @@ class MyApp extends StatelessWidget {
       ),
       ...
 ```
+
+![image](https://user-images.githubusercontent.com/51875059/104128540-76a57500-53ab-11eb-9c03-f70d2d57c3fb.png)
+
 
