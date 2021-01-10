@@ -19,9 +19,12 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'messages_ko';
 
+  static m0(count) => "${count} 번 눌렀습니다.";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "appBarTitle": MessageLookupByLibrary.simpleMessage("flutter 보라 홈페이지"),
+        "bodyCountText": m0,
         "bodyText": MessageLookupByLibrary.simpleMessage("버튼을 여러번 눌렀습니다.")
       };
 }

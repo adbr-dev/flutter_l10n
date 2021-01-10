@@ -264,6 +264,8 @@ String bodyCountText(int count) {
   }
 ```
 
+</br>
+
 **2) sh dart_to_arb.sh 실행 후 intl_messages.arb 수정**
 ![image](https://user-images.githubusercontent.com/51875059/104129366-7018fc80-53af-11eb-9d05-8c3f5daf9002.png)
 
@@ -286,3 +288,8 @@ String bodyCountText(int count) {
   }
 }
 ```
+
+</br>
+
+**3) sh arb_to_dart.sh 실행 후 파일 확인**
+![image](https://user-images.githubusercontent.com/51875059/104129695-98552b00-53b0-11eb-8e99-74f4128f1161.png)
