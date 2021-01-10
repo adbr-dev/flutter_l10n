@@ -122,3 +122,49 @@ flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-us
 * messages_messages_en.dart
 * messages_messages_ko.dart
 * messages_messages.dart
+
+</br>
+
+### 5. Add class BoraLocalizationsDelegate and modify class BoraLocalizations in bora_localizations.dart
+
+**5-1. `BoraLocalizations` class에 다음과 같이 코드를 추가합니다.**
+```dart
+class BoraLocalizations {
+  static Future<BoraLocalizations> load(Locale locale) {
+    final name = locale.countryCode == null || locale.countryCode.isEmpty
+        ? locale.languageCode
+        : locale.toString();
+    final localeName = Intl.canonicalizedLocale(name);
+
+    return initializeMessages(localeName).then((_) {
+      Intl.defaultLocale = localeName;
+      return BoraLocalizations();
+    });
+  }
+
+  static BoraLocalizations of(BuildContext context) {
+    return Localizations.of<BoraLocalizations>(context, BoraLocalizations);
+  }
+  ...
+}
+```
+
+</br>
+
+**5-2. LocalizationsDelegate<BoraLocalizations>을 상속받은 `BoraLocalizationsDelegate` class 추가 합니다.**
+```dart
+class BoraLocalizationsDelegate
+    extends LocalizationsDelegate<BoraLocalizations> {
+  const BoraLocalizationsDelegate();
+
+  @override
+  bool isSupported(Locale locale) => ['ko', 'en'].contains(locale.languageCode);
+
+  @override
+  Future<BoraLocalizations> load(Locale locale) =>
+      BoraLocalizations.load(locale);
+
+  @override
+  bool shouldReload(BoraLocalizationsDelegate old) => false;
+}
+```
