@@ -209,3 +209,20 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+</br>
+
+### 7. 'string ' to l10n.name (output widget)
+출력할 위젯에 적혀있던 단순 String 값을 이제 연결만하면 끝 🎉
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    final l10n = BoraLocalizations.of(context);
+    return Scaffold(
+      appBar: AppBar(
+        // title: Text('Flutter Bora Home Page'),
+        title: Text(l10n.appBarTitle), 
+      ),
+      ...
+```
+
